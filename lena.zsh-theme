@@ -4,7 +4,7 @@
 # Configuration
 num_dirs=2 # Use 0 for full path
 truncated_path="%F{white}%$num_dirs~%f"
-decoration="%F{red}%F{yellow}%F{green}%f"
+decoration="%F{blue}%F{yellow}%F{green}%f"
 background_jobs="%(1j.%F{magenta} %f.)"
 non_zero_return_value="%(0?..%F{cyan}⏽ %f)"
 
