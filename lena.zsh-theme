@@ -11,6 +11,7 @@ decoration="%F{blue}${return_status}${background_jobs}"
 
 
 # git things
+ZSH_THEME_GIT_PROMPT=""
 ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}%f"
 ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}%f"
 
