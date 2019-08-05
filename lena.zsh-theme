@@ -11,10 +11,10 @@ decoration="%F{blue}${return_status}${background_jobs}"
 
 
 # git things
-ZSH_THEME_GIT_PROMPT_PREFIX="%F{grey} ["
-ZSH_THEME_GIT_PROMPT_SUFFIX="] %f"
-ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}%f"
-ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}%f"
+ZSH_THEME_GIT_PROMPT_PREFIX="%F{black} ["
+ZSH_THEME_GIT_PROMPT_SUFFIX="%f "
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}"
 
 
 # Left part of prompt
