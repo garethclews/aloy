@@ -18,8 +18,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}"
 
 
 # Left part of prompt
-PROMPT='$truncated_path $decoration$background_jobs $(git_prompt_info)'
+PROMPT='$truncated_path $decoration$background_jobs$(git_prompt_info)'
 # Right part of prompt
-RPROMPT='$background_jobs'
+RPROMPT=''
 # Input in bold
 # zle_highlight=(default:bold)
