@@ -1,4 +1,4 @@
-# Aloysius  ZSH
+# Aloysius :heart: ZSH
 
 This is a fork of [@elenapan's](https://github.com/elenapan/dotfiles) lena ZSH
 theme. Their prompt is static chevrons, I extended this to give me a little more
