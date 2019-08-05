@@ -1,25 +1,26 @@
 # Minimal zsh theme
 
+# Options
+num_dirs=2  # Use 0 for full path
+
 
 # failure colours
 local return_status="%(?:%F{black}:%F{red})"
-
-# Configuration
-num_dirs=2  # Use 0 for full path
-
-truncated_path="%F{white}%$num_dirs~%f"
-
-decoration="%F{blue}${return_status}%F{green}%f"
+local background_jobs="%(?:%F{black}:%F{green})"
+local truncated_path="%F{white}%$num_dirs~%f"
 
 
+# git things
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}"
 
 
-background_jobs="%(1j.%F{yellow} %f.)"
-non_zero_return_value="%(0?..%F{cyan}⏽ %f)"
+decoration="%F{blue}${return_status}${background_jobs}$(git_prompt_info)"
+
 
 # Left part of prompt
 PROMPT='$truncated_path $decoration '
 # Right part of prompt
-RPROMPT='$background_jobs  $non_zero_return_value'
+RPROMPT=''
 # Input in bold
-zle_highlight=(default:bold)
+# zle_highlight=(default:bold)
