@@ -1,8 +1,8 @@
 # Minimal zsh theme
 
 
-# failure
-local return_status="%(?:%F{grey}:%F{red})"
+# failure colours
+local return_status="%(?:%F{black}:%F{red})"
 
 # Configuration
 num_dirs=2  # Use 0 for full path
