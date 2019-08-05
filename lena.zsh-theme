@@ -1,10 +1,19 @@
 # Minimal zsh theme
-# Requires Nerd Fonts for the icons
+
+
+# failure
+local return_status="%(?:%F{grey}:%F{red})"
 
 # Configuration
-num_dirs=2 # Use 0 for full path
+num_dirs=2  # Use 0 for full path
+
 truncated_path="%F{white}%$num_dirs~%f"
-decoration="%F{blue}%F{magenta}%F{green}%f"
+
+decoration="%F{blue}${return_status}%F{green}%f"
+
+
+
+
 background_jobs="%(1j.%F{yellow} %f.)"
 non_zero_return_value="%(0?..%F{cyan}⏽ %f)"
 
