@@ -4,10 +4,10 @@
 num_dirs=2  # Use 0 for full path
 
 # failure colours
-local return_status="%(?:%F{black}%f:%F{red}%f)"
-local background_jobs="%(?:%F{black}%f:%F{green}%f)"
-local truncated_path="%F{white}%$num_dirs~%f"
-local decoration="%F{blue}${return_status}${background_jobs}"
+return_status="%(?:%F{black}%f:%F{red}%f)"
+background_jobs="%(?:%F{black}%f:%F{green}%f)"
+truncated_path="%F{white}%$num_dirs~%f"
+decoration="%F{blue}${return_status}${background_jobs}"
 
 
 # git things
