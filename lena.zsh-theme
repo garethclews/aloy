@@ -10,8 +10,9 @@ local background_jobs="%(?:%F{black}:%F{green})"
 
 
 # git things
-ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}"
+ZSH_THEME_GIT_PROMPT=""
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}%f"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}%f"
 
 
 # getting ready for outputs
