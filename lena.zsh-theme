@@ -5,7 +5,7 @@ num_dirs=2  # Use 0 for full path
 
 # decoration pieces
 local return_status="%(?:%F{black}:%F{red})%f"
-background_jobs="%(1j.?.%F{grey}.%F{green})%f"
+background_jobs="%(1j?:%F{grey}:%F{green})%f"
 truncated_path="%F{white}%$num_dirs~%f"
 decoration="%F{blue}${return_status}"
 
