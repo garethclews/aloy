@@ -6,7 +6,7 @@ num_dirs=2  # Use 0 for full path
 
 # failure colours
 local return_status="%(?:%F{black}:%F{red})"
-local background_jobs="%(?:%F{black}:%F{green})"
+background_jobs="%(?:%F{black}:%F{green})"
 
 
 # git things
