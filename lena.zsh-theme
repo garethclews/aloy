@@ -18,5 +18,5 @@ ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}"
 
 
 # PROMPT
-PROMPT='$truncated_path $decoration$background_jobs$(git_prompt_status) '
+PROMPT='$truncated_path $decoration$background_jobs$(git_prompt_info) '
 RPROMPT=''
