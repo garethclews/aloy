@@ -14,7 +14,7 @@ decoration="%F{blue}${return_status}"
 ZSH_THEME_GIT_PROMPT_PREFIX=" %F{black}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f "
 ZSH_THEME_GIT_PROMPT_DIRTY=" %F{magenta}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %F{black}"
 
 
 # PROMPT
