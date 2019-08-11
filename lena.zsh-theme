@@ -17,11 +17,6 @@ ZSH_THEME_GIT_PROMPT_DIRTY=" %F{magenta}"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %F{black}"
 
 
-# PROMPT
-ALOY_PROMPT='$truncated_path $decoration$background_jobs$(git_prompt_info) '
-ALOY_RPROMPT=''
-
-
 [ "${+ALOY_MAGICENTER}" -eq 0 ] && ALOY_MAGICENTER=(aloy_me_dirs aloy_me_ls aloy_me_git)
 
 
@@ -296,8 +291,12 @@ function _aloy_bind_widgets() {
     done
 }
 
-# Setup
-autoload -U colors && colors
+
+
+# PROMPT
+ALOY_PROMPT='$truncated_path $decoration$background_jobs$(git_prompt_info) '
+ALOY_RPROMPT=''
+
 setopt prompt_subst
 
 PROMPT='$(_aloy_wrap ALOY_PROMPT) '
