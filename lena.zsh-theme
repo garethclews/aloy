@@ -66,7 +66,6 @@ function _lena_iline {
 }
 
 
-
 # display magic enter
 function _lena_me {
     local -a output
@@ -80,6 +79,17 @@ function _lena_me {
         fi
     done
     printf '%b' "${(j:\n:)output}" | less -XFR
+}
+
+
+# draw infoline if no command is given
+function _lena_buffer-empty {
+    if [ -z "$BUFFER" ]; then
+        _mnml_me
+        zle redisplay
+    else
+        zle accept-line
+    fi
 }
 
 
