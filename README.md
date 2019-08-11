@@ -2,9 +2,15 @@
 
 This is a fork of [@elenapan's](https://github.com/elenapan/dotfiles) lena ZSH
 theme. Their prompt is static chevrons, I extended this to give me a little more
-information in it.
+information in it. It also includes the 'magic enter' from [subnixr's
+minimal](https://github.com/subnixr/minimal) where hitting enter without any
+further commands prints out some useful ls, git and cwd information.
 
-![](./screenshot.png)
+
+| Screenshot                           | Magic enter                          |
+|--------------------------------------|--------------------------------------|
+| ![](https://i.imgur.com/r0rbN3n.png) | ![](https://i.imgur.com/mVw9auQ.png) |
+
 
 The prompts operate as follows:
 
