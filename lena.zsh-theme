@@ -85,14 +85,45 @@ function _lena_me {
 # draw infoline if no command is given
 function _lena_buffer-empty {
     if [ -z "$BUFFER" ]; then
-        _mnml_me
+        _lena_me
         zle redisplay
     else
         zle accept-line
     fi
 }
 
+# properly bind widgets
+# see: https://github.com/zsh-users/zsh-syntax-highlighting/blob/1f1e629290773bd6f9673f364303219d6da11129/zsh-syntax-highlighting.zsh#L292-L356
+function _lena_bind_widgets() {
+    zmodload zsh/zleparameter
+
+    local -a to_bind
+    to_bind=(zle-line-init zle-keymap-select buffer-empty)
+
+    typeset -F SECONDS
+    local zle_wprefix=s$SECONDS-r$RANDOM
+
+    local cur_widget
+    for cur_widget in $to_bind; do
+        case "${widgets[$cur_widget]:-""}" in
+            user:_lena_*);;
+            user:*)
+                zle -N $zle_wprefix-$cur_widget ${widgets[$cur_widget]#*:}
+                eval "_lena_ww_${(q)zle_wprefix}-${(q)cur_widget}() { _lena_${(q)cur_widget}; zle ${(q)zle_wprefix}-${(q)cur_widget} }"
+                zle -N $cur_widget _lena_ww_$zle_wprefix-$cur_widget
+                ;;
+            *)
+                zle -N $cur_widget _lena_$cur_widget
+                ;;
+        esac
+    done
+}
 
 # PROMPT
 PROMPT='$truncated_path $decoration$background_jobs$(git_prompt_info) '
 RPROMPT=''
+
+lena_bind_widgets
+
+bindkey -M main  "^M" buffer-empty
+bindkey -M vicmd "^M" buffer-empty
