@@ -10,14 +10,6 @@ truncated_path="%F{white}%$num_dirs~%f"
 decoration="%F{blue}${return_status}"
 
 
-# git things
-ZSH_THEME_GIT_PROMPT_PREFIX=" %F{black}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%f "
-ZSH_THEME_GIT_PROMPT_DIRTY=" %F{magenta}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %F{black}"
-ZSH_THEME_GIT_PROMPT_BEHIND=" %F{cyan}"
-
-
 [ "${+ALOY_MAGICENTER}" -eq 0 ] && ALOY_MAGICENTER=(aloy_me_dirs aloy_me_ls aloy_me_git)
 
 
@@ -236,15 +228,9 @@ function _aloy_bind_widgets() {
     done
 }
 
-function git_prompt() {
-  [[ -d .git ]] && (
-     ref=$(git symbolic-ref HEAD | cut -d'/' -f3)
-     echo $ref ) || echo ""
-}
-
 
 # PROMPT
-PROMPT='$truncated_path $decoration$background_jobs$(git_prompt) '
+PROMPT='$truncated_path $decoration$background_jobs$(aloy_git) '
 RPROMPT=''
 
 setopt prompt_subst
