@@ -1,4 +1,4 @@
-# Minimal zsh theme
+# zsh theme
 
 # Options
 num_dirs=2  # Use 0 for full path
@@ -236,10 +236,14 @@ function _aloy_bind_widgets() {
     done
 }
 
+function git_prompt() {
+  ref=$(git symbolic-ref HEAD | cut -d'/' -f3)
+  echo $ref
+}
 
 
 # PROMPT
-PROMPT='$truncated_path $decoration$background_jobs$(git_prompt_info) '
+PROMPT='$truncated_path $decoration$background_jobs$(git_prompt) '
 RPROMPT=''
 
 setopt prompt_subst
