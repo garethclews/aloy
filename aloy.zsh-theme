@@ -229,8 +229,21 @@ function _aloy_bind_widgets() {
 }
 
 
+function git_prompt_info() {
+    local bname="$(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
+
+    if [ -n "$bname" ]; then
+        [[ -n "$(git status --porcelain 2> /dev/null)" ]] && \
+          statc="%F{magenta}" || \
+          statc=""
+
+        printf " %F{black}($bname) $statc%f"
+    fi
+}
+
+
 # PROMPT
-PROMPT='$truncated_path $decoration$background_jobs$(aloy_git) '
+PROMPT='$truncated_path $decoration$background_jobs$(git_prompt_info) '
 RPROMPT=''
 
 setopt prompt_subst
