@@ -237,8 +237,9 @@ function _aloy_bind_widgets() {
 }
 
 function git_prompt() {
-  ref=$(git symbolic-ref HEAD | cut -d'/' -f3)
-  echo $ref
+  [[ -d .git ]] && (
+     ref=$(git symbolic-ref HEAD | cut -d'/' -f3)
+     echo $ref ) || echo ""
 }
 
 
