@@ -228,7 +228,6 @@ function _aloy_bind_widgets() {
     done
 }
 
-
 function git_prompt_info() {
     local bname="$(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
 
