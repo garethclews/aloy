@@ -236,7 +236,7 @@ function git_prompt_info() {
           statc="%F{magenta}" || \
           statc=""
 
-        printf " %F{black}($bname) $statc%f"
+        echo " %F{black}$bname $statc%f"
     fi
 }
 
