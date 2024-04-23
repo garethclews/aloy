@@ -4,8 +4,8 @@
 num_dirs=2  # Use 0 for full path
 
 # decoration pieces
-local return_status="%(?:%F{white}:%F{red})%f"
-background_jobs="%(1j:%F{green}:%F{white})%f"
+local return_status="%(?:%F{237}:%F{red})%f"
+background_jobs="%(1j:%F{green}:%F{237})%f"
 truncated_path="%F{white}%$num_dirs~%f"
 decoration="%F{blue}${return_status}"
 
@@ -236,7 +236,7 @@ function git_prompt_info() {
           statc="%F{magenta}" || \
           statc=""
 
-        echo " %F{white}$bname $statc%f"
+        echo " %F{237}$bname $statc%f"
     fi
 }
 
