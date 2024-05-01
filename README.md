@@ -19,10 +19,10 @@ The prompts operate as follows:
 - **third**: background processes
 - **fourth**: git prompt info, does not appear in unversioned directories
 
-The default colour for the second and third is `black` and they change colour to
+The default colour for the second and third is `#237` and they change colour to
 alert you to a non-standard behaviour of some kind. The git prompt is `green` if
 you are up to date and `magenta` otherwise. Branch name is also shown in
-`black`.
+`#237`.
 
 This is still a pretty minimal theme and suits my needs. For any functional
 problems please raise an issue, otherwise this is personal preferences so
